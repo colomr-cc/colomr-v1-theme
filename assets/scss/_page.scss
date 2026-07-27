@@ -116,7 +116,7 @@
   line-height: 1.8;
   font-size: 1.0625rem;
 
-  p + p {
+  > * + * {
     margin-top: 1rem;
   }
 }
