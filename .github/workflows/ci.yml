@@ -11,13 +11,18 @@ jobs:
   quality:
     runs-on: ubuntu-latest
     steps:
+      # Se clona en themes/colomr-v1 para reproducir la estructura real:
+      # Hugo busca el tema por el nombre de su directorio, y el repo se llama
+      # colomr-v1-theme. Sin esto, el build no encuentra el tema.
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          path: themes/colomr-v1
 
       - name: Sin atribución de IA (autoría del owner)
         if: github.event_name == 'pull_request'
+        working-directory: themes/colomr-v1
         env:
           PR_BODY: ${{ github.event.pull_request.body }}
           PR_TITLE: ${{ github.event.pull_request.title }}
@@ -52,4 +57,4 @@ jobs:
 
       # Smoke test del tema: si una plantilla o el SCSS se rompen, el build falla.
       - name: Build del exampleSite
-        run: hugo --source exampleSite --themesDir ../.. --cleanDestinationDir --minify
+        run: hugo --source themes/colomr-v1/exampleSite --themesDir ../.. --cleanDestinationDir --minify
