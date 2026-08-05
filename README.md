@@ -89,7 +89,7 @@ defaultContentLanguage = "es"
 defaultContentLanguageInSubdir = true   # all languages under /es/, /en/ prefixes
 
 [languages.es]
-  languageCode = "es"
+  locale = "es"
   languageName = "Español"
   weight = 1
 
@@ -102,7 +102,7 @@ defaultContentLanguageInSubdir = true   # all languages under /es/, /en/ prefixe
   nav_icon = "person"
 
 [languages.en]
-  languageCode = "en"
+  locale = "en"
   languageName = "English"
   weight = 2
 
