@@ -136,8 +136,8 @@
 
   &:hover { background-color: var(--color-surface-container-high); }
 
-  // Descomentar para reactivar en móvil:
-  // @media (max-width: 767px) { display: flex; }
+  // Oculto en móvil: el bottom nav cubre esta navegación.
+  // Para reactivarlo, mostrarlo con display: flex por debajo de 768px.
 }
 
 // --- Drawer móvil (oculto mientras bottom nav es suficiente) ---
@@ -158,9 +158,9 @@
 
   &.is-open { transform: translateX(0); }
 
-  // Descomentar para reactivar en móvil:
-  // @media (max-width: 767px) { display: flex; transform: translateX(100%); }
-  // &.is-open { @media (max-width: 767px) { transform: translateX(0); } }
+  // Drawer desactivado: el bottom nav cumple su función en móvil.
+  // Para reactivarlo, mostrarlo por debajo de 768px partiendo de
+  // translateX(100%) y llevarlo a translateX(0) en el estado is-open.
 }
 
 .nav-drawer__link {
@@ -188,9 +188,8 @@
   background: rgba(0, 0, 0, 0.4);
   z-index: 199;
 
-  // Descomentar para reactivar con el drawer:
-  // &.is-open { display: block !important; }
-  // @media (min-width: 768px) { display: none !important; }
+  // Overlay del drawer, desactivado junto con él. Si se reactiva:
+  // visible en el estado is-open y oculto a partir de 768px.
 }
 
 // --- Bottom nav (mobile) ---

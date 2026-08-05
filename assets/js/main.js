@@ -67,13 +67,13 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   function applyTheme(theme) {
-    root.setAttribute('data-theme', theme);
+    root.dataset.theme = theme;
     localStorage.setItem(STORAGE_KEY, theme);
   }
 
   applyTheme(getPreferred());
 
   window.__toggleTheme = function () {
-    applyTheme(root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
+    applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark');
   };
 })();
