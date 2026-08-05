@@ -31,10 +31,13 @@
 <!-- Contenido: tabs + badges -->
 <div class="formacion">
 
-  <div class="ftabs">
+  <div class="ftabs" role="tablist">
     {{ range $i, $p := $providers }}
     <button
       class="ftabs__tab{{ if eq $i 0 }} ftabs__tab--active{{ end }}"
+      role="tab"
+      id="tabbtn-{{ $p.id }}"
+      aria-controls="tab-{{ $p.id }}"
       data-tab="{{ $p.id }}"
       aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
       {{ if eq $p.id "google" }}<img class="ftabs__icon ftabs__icon--dark" src="{{ "/images/icons/icons-gemini-black.svg" | relURL }}" alt="" /><img class="ftabs__icon ftabs__icon--light" src="{{ "/images/icons/icons-gemini-white.svg" | relURL }}" alt="" />
@@ -46,7 +49,7 @@
 
   {{ range $i, $p := $providers }}
   {{ $badges := index site.Data $p.data }}
-  <div class="ftabs__panel{{ if eq $i 0 }} ftabs__panel--active{{ end }}" id="tab-{{ $p.id }}">
+  <div class="ftabs__panel{{ if eq $i 0 }} ftabs__panel--active{{ end }}" id="tab-{{ $p.id }}" role="tabpanel" aria-labelledby="tabbtn-{{ $p.id }}">
 
     <div class="fbadges__grid">
       {{ range first 6 $badges }}

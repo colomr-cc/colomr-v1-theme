@@ -1,5 +1,5 @@
 <header class="site-header">
-  <nav class="site-nav">
+  <nav class="site-nav" aria-label="{{ i18n "nav_aria" }}">
     <div class="nav-brand">
       <a href="{{ "/" | relLangURL }}" class="nav-logo-link">
         <img src="/images/logo.png" alt="{{ .Site.Params.author }}" class="nav-logo" />
@@ -19,7 +19,7 @@
       </button>
       {{ if .IsTranslated }}
       {{ range .Translations }}
-      <a href="{{ .RelPermalink }}" class="lang-toggle" aria-label="{{ i18n "switch_language" }}" onclick="localStorage.setItem('colomr-lang','{{ .Language.Lang }}')">
+      <a href="{{ .RelPermalink }}" class="lang-toggle" onclick="localStorage.setItem('colomr-lang','{{ .Language.Lang }}')">
         {{ i18n "switch_language" }}
       </a>
       {{ end }}
@@ -55,7 +55,7 @@
 <div class="nav-overlay" id="nav-overlay"></div>
 
 <!-- Bottom nav (solo móvil) -->
-<nav class="bottom-nav" aria-label="{{ i18n "nav_aria" }}">
+<nav class="bottom-nav" aria-label="{{ i18n "nav_aria_mobile" }}">
   <a href="{{ "/" | relLangURL }}" class="bottom-nav__item{{ if .IsHome }} bottom-nav__item--active{{ end }}">
     <span class="material-symbols-outlined">home</span>
     <span>{{ i18n "home_label" }}</span>

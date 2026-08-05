@@ -1,0 +1,26 @@
+# Valores por defecto del tema. Un sitio puede sobreescribir cualquiera
+# definiendo la misma clave en su propio i18n/es.toml.
+
+[home_label]
+other = "Inicio"
+
+[explore_btn]
+other = "Explorar"
+
+[page_under_construction]
+other = "Página en construcción."
+
+[toggle_theme]
+other = "Cambiar modo de color"
+
+[open_menu]
+other = "Abrir menú"
+
+[switch_language]
+other = "EN"
+
+[nav_aria]
+other = "Navegación principal"
+
+[nav_aria_mobile]
+other = "Navegación móvil"
