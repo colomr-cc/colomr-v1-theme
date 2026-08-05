@@ -1,7 +1,7 @@
 baseurl = "https://example.com/"
 title = "My Personal Site"
 theme = "colomr-v1"
-languagecode = "en"
+locale = "en"
 defaultcontentlanguage = "en"
 
 # Disable taxonomies (not used by this theme)
