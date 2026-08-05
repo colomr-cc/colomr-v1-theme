@@ -58,3 +58,27 @@ jobs:
       # Smoke test del tema: si una plantilla o el SCSS se rompen, el build falla.
       - name: Build del exampleSite
         run: hugo --source themes/colomr-v1/exampleSite --themesDir ../.. --cleanDestinationDir --minify
+
+      # El build puede terminar con éxito y dejar un CSS inservible: si el
+      # transpilador no entiende una directiva, la copia tal cual a la salida.
+      # Se comprueba que el CSS existe, tiene tamaño y contiene estilos reales.
+      - name: Verificar el CSS generado
+        run: |
+          CSS="$(find themes/colomr-v1/exampleSite/public/css -name '*.css' | head -1)"
+          if [[ -z "$CSS" ]]; then
+            echo "::error::El build no ha generado ningún CSS"
+            exit 1
+          fi
+          BYTES="$(wc -c < "$CSS")"
+          echo "CSS generado: $CSS ($BYTES bytes)"
+          if [[ "$BYTES" -lt 10000 ]]; then
+            echo "::error::El CSS generado ocupa $BYTES bytes: demasiado poco, el SCSS no se ha compilado bien"
+            exit 1
+          fi
+          for SELECTOR in ".site-header" ".ftabs__tab" "--color-primary"; do
+            if ! grep -qF -- "$SELECTOR" "$CSS"; then
+              echo "::error::El CSS generado no contiene $SELECTOR"
+              exit 1
+            fi
+          done
+          echo "CSS verificado: tamaño y selectores esperados presentes"
