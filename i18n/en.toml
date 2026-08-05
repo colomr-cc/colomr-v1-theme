@@ -1,0 +1,26 @@
+# Theme defaults. A site may override any of these by defining the same key
+# in its own i18n/en.toml.
+
+[home_label]
+other = "Home"
+
+[explore_btn]
+other = "Explore"
+
+[page_under_construction]
+other = "Page under construction."
+
+[toggle_theme]
+other = "Toggle color mode"
+
+[open_menu]
+other = "Open menu"
+
+[switch_language]
+other = "ES"
+
+[nav_aria]
+other = "Main navigation"
+
+[nav_aria_mobile]
+other = "Mobile navigation"
