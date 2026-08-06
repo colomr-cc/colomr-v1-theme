@@ -52,7 +52,9 @@ jobs:
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@2752ce1d29631191ea3f27c23495fa06139a5b78 # v3
         with:
-          hugo-version: 'latest'
+          # Fijada a propósito: con 'latest', el CI puede aprobar código que rompe
+          # el build en local. Se mantiene igual que en colomr.cc.
+          hugo-version: '0.164.0'
           extended: true
 
       # Smoke test del tema: si una plantilla o el SCSS se rompen, el build falla.
