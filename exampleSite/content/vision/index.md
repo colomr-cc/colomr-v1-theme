@@ -40,8 +40,8 @@ blocks:
     items:
       - label: "LinkedIn"
         url: "https://linkedin.com/"
-        icon: "fa fa-linkedin"
+        icon: "fa-brands fa-linkedin-in"
       - label: "Email"
         url: "mailto:hello@example.com"
-        icon: "fa fa-envelope"
+        icon: "fa-solid fa-envelope"
 ---

@@ -55,8 +55,8 @@ blocks:
     items:
       - label: "LinkedIn"
         url: "https://linkedin.com/"
-        icon: "fa fa-linkedin"
+        icon: "fa-brands fa-linkedin-in"
       - label: "GitHub"
         url: "https://github.com/"
-        icon: "fa fa-github"
+        icon: "fa-brands fa-github"
 ---
