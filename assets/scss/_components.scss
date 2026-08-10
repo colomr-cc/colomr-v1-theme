@@ -315,8 +315,11 @@
 
 .footer-social {
   display: flex;
-  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  gap: 1rem 1.5rem;
+  max-width: 100%;
 }
 
 .footer-social__link {
