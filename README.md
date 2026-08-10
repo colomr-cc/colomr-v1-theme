@@ -20,7 +20,7 @@ Dark mode by default, responsive, lightweight, and fully configurable from front
 
 ## Requirements
 
-- Hugo Extended >= 0.120.0
+- Hugo Extended >= 0.156.0
 - Google Fonts loaded via CDN (Plus Jakarta Sans, Inter, Material Symbols)
 
 ## Installation
@@ -90,7 +90,7 @@ defaultContentLanguageInSubdir = true   # all languages under /es/, /en/ prefixe
 
 [languages.es]
   locale = "es"
-  languageName = "Español"
+  label = "Español"
   weight = 1
 
 [languages.es.params]
@@ -103,7 +103,7 @@ defaultContentLanguageInSubdir = true   # all languages under /es/, /en/ prefixe
 
 [languages.en]
   locale = "en"
-  languageName = "English"
+  label = "English"
   weight = 2
 
 [languages.en.params]

@@ -48,7 +48,7 @@
   </div>
 
   {{ range $i, $p := $providers }}
-  {{ $badges := index site.Data $p.data }}
+  {{ $badges := index hugo.Data $p.data }}
   <div class="ftabs__panel{{ if eq $i 0 }} ftabs__panel--active{{ end }}" id="tab-{{ $p.id }}" role="tabpanel" aria-labelledby="tabbtn-{{ $p.id }}">
 
     <div class="fbadges__grid">
