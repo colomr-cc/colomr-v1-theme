@@ -69,7 +69,7 @@ languagecode = "en"
 # Social links (displayed in footer)
 [[params.social]]
   name = "Github"
-  icon = "fa fa-github fa-2x"
+  icon = "fa-brands fa-github fa-2x"
   weight = 1
   url = "https://github.com/"
 
@@ -263,7 +263,7 @@ blocks:
     items:
       - label: "LinkedIn"
         url: "https://linkedin.com/"
-        icon: "fa fa-linkedin"                # Font Awesome 4 class
+        icon: "fa-brands fa-linkedin-in"      # Font Awesome 7 class
 ```
 
 ### Providers page (`providers.html`)
@@ -324,7 +324,7 @@ Key variables:
 | System | Usage | Browse |
 |--------|-------|--------|
 | Material Symbols Outlined | UI, nav, block cards | [fonts.google.com/icons](https://fonts.google.com/icons) |
-| Font Awesome 4.7 | Social links, contact | [fontawesome.com/v4/icons](https://fontawesome.com/v4/icons/) |
+| Font Awesome 7 | Social links, contact | [fontawesome.com/search](https://fontawesome.com/search?ic=free) |
 
 ### Adding a new block type
 
@@ -364,7 +364,7 @@ Built with [Google Stitch 2](https://stitch.withgoogle.com) (design) and
 
 Third-party resources:
 
-- Icons: [Material Symbols](https://fonts.google.com/icons) + [Font Awesome 4.7](https://fontawesome.com/v4/)
+- Icons: [Material Symbols](https://fonts.google.com/icons) + [Font Awesome 7](https://fontawesome.com/)
 - Fonts: [Plus Jakarta Sans](https://fonts.google.com/specimen/Plus+Jakarta+Sans) + [Inter](https://fonts.google.com/specimen/Inter)
 
 If you use this theme, a link back to the [original repository](https://github.com/colomr-cc/colomr-v1-theme) or to [colomr.cc](https://colomr.cc) is appreciated.
