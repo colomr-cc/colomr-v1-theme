@@ -84,3 +84,11 @@ jobs:
             fi
           done
           echo "CSS verificado: tamaño y selectores esperados presentes"
+
+  sonar:
+    needs: quality
+    uses: maiwei-app/workflows/.github/workflows/sonar-scan.yml@main
+    with:
+      project-key: maiwei-app_colomr-v1-theme
+    secrets:
+      sonar-token: ${{ secrets.SONAR_TOKEN }}
